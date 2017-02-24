@@ -59,19 +59,19 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name" />
+                android:hint="@string/nameHint" />
 
             <EditText
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Title" />
+                android:hint="@string/titleHint" />
 
             <EditText
                 android:id="@+id/body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Blog Post"
+                android:hint="@string/blogBodyHint"
                 android:inputType="textMultiLine"
                 android:typeface="normal"
                 android:gravity="top" />
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:text="Save Post"
+                android:text="@string/SavePosts"
                 android:onClick="savePosts"
 
                 />
@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="seeAll"
-                android:text="See All Posts" />
+                android:text="@string/ViewAllPosts" />
 
         </LinearLayout>
 

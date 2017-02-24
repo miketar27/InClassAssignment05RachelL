@@ -4,6 +4,11 @@
     <string name="subtext">Blogging for nerds!</string>
     <string name="EnterBlog">Enter your Blog!</string>
     <string name="Blogs">Here are your Blogs:</string>
+    <string name="SavePosts">Save Posts</string>
+    <string name="ViewAllPosts">View All Posts:</string>
+    <string name="nameHint">name</string>
+    <string name="titleHint">blog title</string>
+    <string name="blogBodyHint">Blog body here</string>
 
 
 </resources>
