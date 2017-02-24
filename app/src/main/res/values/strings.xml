@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Blogorn Blogging!</string>
+    <string name="opening_text">Blogorn Blogging</string>
+    <string name="subtext">Blogging for nerds!</string>
+    <string name="EnterBlog">Enter your Blog!</string>
+    <string name="Blogs">Here are your Blogs:</string>
+
+
+</resources>
