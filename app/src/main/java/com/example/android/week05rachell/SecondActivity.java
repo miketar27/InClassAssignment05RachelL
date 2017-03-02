@@ -23,6 +23,7 @@ public class SecondActivity extends AppCompatActivity {
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
 
         ArrayList<BlogPost> posts = (ArrayList<BlogPost>) intent.getSerializableExtra("BlogPosts");
+        String avatar= intent.getStringExtra("avatar");
 
         for (int index = 0; index < posts.size(); index++) {
             LinearLayout wrapper = new LinearLayout(this);
@@ -53,7 +54,32 @@ public class SecondActivity extends AppCompatActivity {
             blogViewTitle.setTextSize(30);
             blogViewTitle.setTypeface(Typeface.DEFAULT_BOLD);
             blogViewName.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
-            icon.setImageResource(R.drawable.batman);
+            switch (avatar) {
+                case "batman":
+                    icon.setImageResource(R.drawable.batman);
+                    break;
+                case "superman":
+                    icon.setImageResource(R.drawable.superman);
+                    break;
+                case "gandolf":
+                    icon.setImageResource(R.drawable.gandolf);
+                    break;
+                case "bart":
+                    icon.setImageResource(R.drawable.bart_simpson);
+                    break;
+                case "lara":
+                    icon.setImageResource(R.drawable.lara_croft);
+                    break;
+                case "harley":
+                    icon.setImageResource(R.drawable.harley_quinn);
+                    break;
+                case "minnie":
+                    icon.setImageResource(R.drawable.minnie_mouse);
+                    break;
+                case "lisa":
+                    icon.setImageResource(R.drawable.lisa_simpson);
+                    break;
+            }
 
             blogViewTitle.setText(posts.get(index).getTitle());
             blogViewBody.setText(posts.get(index).getBody());

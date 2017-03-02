@@ -10,7 +10,7 @@ public class BlogPost implements Serializable {
     String name;
     String title;
     String body;
-
+    String avatar;
 
     public String getName() {
         return name;
@@ -36,9 +36,11 @@ public class BlogPost implements Serializable {
         this.body = body;
     }
 
-    public BlogPost(String name, String title, String body) {
+
+    public BlogPost(String name, String title, String body, String avatar) {
         this.name = name;
         this.title = title;
         this.body = body;
+        this.avatar=avatar;
     }
 }
