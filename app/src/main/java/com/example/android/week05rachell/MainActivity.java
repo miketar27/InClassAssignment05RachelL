@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         String username = sharedPref.getString(key, getString(R.string.saved_username_default));
 
         TextView usernameDisplay = (TextView) findViewById(R.id.username_display);
-        usernameDisplay.setText("Welcome, " + username + "!");;
+        usernameDisplay.setText("Welcome, " + username + "!");
     }
 
     public void changeUsername(View view) {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onAvatarClick(View view) {
         avatarChecked = ((RadioButton) view).isChecked();
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.batman:
                 if (avatarChecked) {
                     avatar = "batman";

@@ -55,24 +55,25 @@
             android:paddingTop="10dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/username_display"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="Username"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:id="@+id/username_display"/>
+                android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/new_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Username"
-                android:id="@+id/new_username" />
+                android:hint="Username" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Change Username"
-                android:onClick="changeUsername"/>
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:onClick="changeUsername"
+                android:text="Change Username" />
 
 
             <EditText
@@ -107,76 +108,86 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <RadioGroup
+                android:id="@+id/male_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/male_group"
-                android:onClick="onAvatarClick">
+                android:gravity="center"
+                android:onClick="onAvatarClick"
+                android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/batman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Batman"
-                    android:id="@+id/batman"/>
+                    android:layout_marginRight="5dp"
+                    android:text="Batman" />
 
                 <RadioButton
+                    android:id="@+id/superman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Superman"
-                    android:id="@+id/superman"/>
+                    android:layout_marginRight="5dp"
+
+                    android:text="Superman" />
 
                 <RadioButton
+                    android:id="@+id/gandolf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gandolf"
-                    android:id="@+id/gandolf"/>
+                    android:layout_marginRight="5dp"
+
+                    android:text="Gandolf" />
 
                 <RadioButton
+                    android:id="@+id/bart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bart"
-                    android:id="@+id/bart"/>
+                    android:text="Bart" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <RadioGroup
+                android:id="@+id/female_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/female_group"
-                android:onClick="onAvatarClick">
+                android:gravity="center"
+                android:onClick="onAvatarClick"
+                android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/lara"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lara"
-                    android:id="@+id/lara"/>
+                    android:layout_marginRight="20dp"
+                    android:text="Lara" />
 
                 <RadioButton
+                    android:id="@+id/harley"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Harley"
-                    android:id="@+id/harley"/>
+                    android:layout_marginRight="20dp"
+                    android:text="Harley" />
 
                 <RadioButton
+                    android:id="@+id/minnie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Minnie"
-                    android:id="@+id/minnie"/>
+                    android:layout_marginRight="20dp"
+                    android:text="Minnie" />
 
                 <RadioButton
+                    android:id="@+id/lisa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lisa"
-                    android:id="@+id/lisa"/>
+                    android:text="Lisa" />
 
             </RadioGroup>
         </LinearLayout>
