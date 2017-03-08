@@ -9,6 +9,6 @@
     <string name="nameHint">name</string>
     <string name="titleHint">blog title</string>
     <string name="blogBodyHint">Blog body here</string>
-
-
+    <string name="saved_username" >User</string>
+    <string name="saved_username_default" >User</string>
 </resources>

@@ -36,6 +36,13 @@ public class BlogPost implements Serializable {
         this.body = body;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 
     public BlogPost(String name, String title, String body, String avatar) {
         this.name = name;

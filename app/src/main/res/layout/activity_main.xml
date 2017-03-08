@@ -33,7 +33,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#A9A9A9"
-                android:textSize="40sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
 
                 />
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/subtext"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="italic" />
         </LinearLayout>
 
@@ -53,6 +53,26 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/username_display"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:id="@+id/new_username" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Username"
+                android:onClick="changeUsername"/>
 
 
             <EditText
@@ -83,112 +103,89 @@
                 android:text="Choose your avatar:"
                 android:textSize="25sp" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="20sp"/>
+
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/male_group"
+                android:onClick="onAvatarClick">
 
-                <LinearLayout
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:text="Batman"
+                    android:id="@+id/batman"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Male: "
-                        android:textSize="20sp" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Superman"
+                    android:id="@+id/superman"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gandolf"
+                    android:id="@+id/gandolf"/>
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:text="Batman"
-                            android:id="@+id/batman"
-                            android:onClick="onAvatarClick"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bart"
+                    android:id="@+id/bart"/>
+            </RadioGroup>
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:text="Superman"
-                            android:id="@+id/superman"
-                            android:onClick="onAvatarClick"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="20sp"/>
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:text="Gandolf"
-                            android:id="@+id/gandolf"
-                            android:onClick="onAvatarClick"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/female_group"
+                android:onClick="onAvatarClick">
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bart"
-                            android:id="@+id/bart"
-                            android:onClick="onAvatarClick"/>
-                    </LinearLayout>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lara"
+                    android:id="@+id/lara"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Female: "
-                        android:textSize="20sp" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harley"
+                    android:id="@+id/harley"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minnie"
+                    android:id="@+id/minnie"/>
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="25dp"
-                            android:text="Lara"
-                            android:id="@+id/lara"
-                            android:onClick="onAvatarClick"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lisa"
+                    android:id="@+id/lisa"/>
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="25dp"
-                            android:text="Harley"
-                            android:id="@+id/harley"
-                            android:onClick="onAvatarClick"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="25dp"
-                            android:text="Minnie"
-                            android:id="@+id/minnie"
-                            android:onClick="onAvatarClick"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lisa"
-                            android:id="@+id/lisa"
-                            android:onClick="onAvatarClick"/>
-                    </LinearLayout>
-                </LinearLayout>
             </RadioGroup>
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
-
 
             <Button
                 android:id="@+id/savePost"
@@ -204,7 +201,6 @@
                 android:layout_height="wrap_content"
                 android:onClick="seeAll"
                 android:text="@string/ViewAllPosts" />
-
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

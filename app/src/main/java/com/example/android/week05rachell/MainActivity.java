@@ -1,11 +1,14 @@
 package com.example.android.week05rachell;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,13 +19,33 @@ public class MainActivity extends AppCompatActivity {
     boolean avatarChecked;
     ArrayList<BlogPost> blogPostArrayList;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         blogPostArrayList = new ArrayList<BlogPost>();
 
+        String key = getString(R.string.saved_username);
+
+        SharedPreferences sharedPref = getPreferences(MODE_PRIVATE);
+
+        String username = sharedPref.getString(key, getString(R.string.saved_username_default));
+
+        TextView usernameDisplay = (TextView) findViewById(R.id.username_display);
+        usernameDisplay.setText("Welcome, " + username + "!");;
+    }
+
+    public void changeUsername(View view) {
+        EditText editText = (EditText) findViewById(R.id.new_username);
+        String newUsername = editText.getText().toString();
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(getString(R.string.saved_username), newUsername);
+        editor.commit();
+
+        editText.setText("");
+        TextView usernameDisplay = (TextView) findViewById(R.id.username_display);
+        usernameDisplay.setText("Welcome, " + newUsername + "!");
     }
 
     public void onAvatarClick(View view) {
@@ -71,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     public void savePosts(View view) {
         EditText name = ((EditText) findViewById(R.id.name));
         EditText title = ((EditText) findViewById(R.id.title));
@@ -87,20 +109,20 @@ public class MainActivity extends AppCompatActivity {
         title.setText("");
         body.setText("");
 
-        Toast.makeText(this, "Your post: " + sTitle + " has been saved.", Toast.LENGTH_SHORT).show();
+        RadioGroup maleGroup = (RadioGroup) findViewById(R.id.male_group);
+        RadioButton maleCheckedRB = (RadioButton) findViewById(maleGroup.getCheckedRadioButtonId());
+        maleCheckedRB.setChecked(false);
 
+        RadioGroup femaleGroup = (RadioGroup) findViewById(R.id.female_group);
+        RadioButton femaleCheckedRB = (RadioButton) findViewById(femaleGroup.getCheckedRadioButtonId());
+        femaleCheckedRB.setChecked(false);
+
+        Toast.makeText(this, "Your post: " + sTitle + " has been saved.", Toast.LENGTH_SHORT).show();
     }
 
     public void seeAll(View view) {
-
         intent = new Intent(this, SecondActivity.class);
-        intent.putExtra("avatar", avatar);
         intent.putExtra("BlogPosts", blogPostArrayList);
         startActivity(intent);
-
-
     }
-
-
-
 }
