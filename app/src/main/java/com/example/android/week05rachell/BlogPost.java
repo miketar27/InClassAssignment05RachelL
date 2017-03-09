@@ -11,6 +11,7 @@ public class BlogPost implements Serializable {
     String title;
     String body;
     String avatar;
+    int test=0;
 
     public String getName() {
         return name;

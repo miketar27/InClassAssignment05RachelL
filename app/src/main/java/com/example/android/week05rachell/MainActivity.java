@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         String sbody = body.getText().toString();
 
         BlogPost blog = new BlogPost(sName, sTitle, sbody, avatar);
+
         blogPostArrayList.add(blog);
         name.setText("");
         title.setText("");
@@ -112,14 +113,12 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup maleGroup = (RadioGroup) findViewById(R.id.male_group);
         RadioGroup femaleGroup = (RadioGroup) findViewById(R.id.female_group);
 
-        if (maleGroup.getCheckedRadioButtonId() != -1)
-        {
+        if (maleGroup.getCheckedRadioButtonId() != -1) {
             RadioButton maleCheckedRB = (RadioButton) findViewById(maleGroup.getCheckedRadioButtonId());
             maleCheckedRB.setChecked(false);
         }
 
-        if (femaleGroup.getCheckedRadioButtonId() != -1)
-        {
+        if (femaleGroup.getCheckedRadioButtonId() != -1) {
             RadioButton femaleCheckedRB = (RadioButton) findViewById(femaleGroup.getCheckedRadioButtonId());
             femaleCheckedRB.setChecked(false);
         }

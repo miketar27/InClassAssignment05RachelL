@@ -123,6 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
+                    android:onClick="onAvatarClick"
                     android:text="Batman" />
 
                 <RadioButton
@@ -130,20 +131,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-                    android:text="Superman"/>
+                    android:onClick="onAvatarClick"
+                    android:text="Superman" />
 
                 <RadioButton
                     android:id="@+id/gandolf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-                    android:text="Gandolf"
-                    />
+                    android:onClick="onAvatarClick"
+                    android:text="Gandolf" />
 
                 <RadioButton
                     android:id="@+id/bart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onAvatarClick"
                     android:text="Bart" />
             </RadioGroup>
 
@@ -158,7 +161,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:onClick="onAvatarClick"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -166,6 +168,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
+                    android:onClick="onAvatarClick"
                     android:text="Lara" />
 
                 <RadioButton
@@ -173,21 +176,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
-                    android:text="Harley"
-                    />
+                    android:onClick="onAvatarClick"
+                    android:text="Harley" />
 
                 <RadioButton
                     android:id="@+id/minnie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
-                    android:text="Minnie"
-                    />
+                    android:onClick="onAvatarClick"
+                    android:text="Minnie" />
 
                 <RadioButton
                     android:id="@+id/lisa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onAvatarClick"
                     android:text="Lisa" />
 
             </RadioGroup>
