@@ -130,16 +130,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-
-                    android:text="Superman" />
+                    android:text="Superman"/>
 
                 <RadioButton
                     android:id="@+id/gandolf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-
-                    android:text="Gandolf" />
+                    android:text="Gandolf"
+                    />
 
                 <RadioButton
                     android:id="@+id/bart"
@@ -174,14 +173,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
-                    android:text="Harley" />
+                    android:text="Harley"
+                    />
 
                 <RadioButton
                     android:id="@+id/minnie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
-                    android:text="Minnie" />
+                    android:text="Minnie"
+                    />
 
                 <RadioButton
                     android:id="@+id/lisa"

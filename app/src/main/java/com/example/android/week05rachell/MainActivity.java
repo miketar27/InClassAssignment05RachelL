@@ -110,13 +110,27 @@ public class MainActivity extends AppCompatActivity {
         body.setText("");
 
         RadioGroup maleGroup = (RadioGroup) findViewById(R.id.male_group);
-        RadioButton maleCheckedRB = (RadioButton) findViewById(maleGroup.getCheckedRadioButtonId());
-        maleCheckedRB.setChecked(false);
-
         RadioGroup femaleGroup = (RadioGroup) findViewById(R.id.female_group);
-        RadioButton femaleCheckedRB = (RadioButton) findViewById(femaleGroup.getCheckedRadioButtonId());
-        femaleCheckedRB.setChecked(false);
 
+        if (maleGroup.getCheckedRadioButtonId() == -1)
+        {
+
+        }
+        else
+        {
+            RadioButton maleCheckedRB = (RadioButton) findViewById(maleGroup.getCheckedRadioButtonId());
+            maleCheckedRB.setChecked(false);
+        }
+
+        if (femaleGroup.getCheckedRadioButtonId() == -1)
+        {
+
+        }
+        else
+        {
+            RadioButton femaleCheckedRB = (RadioButton) findViewById(femaleGroup.getCheckedRadioButtonId());
+            femaleCheckedRB.setChecked(false);
+        }
         Toast.makeText(this, "Your post: " + sTitle + " has been saved.", Toast.LENGTH_SHORT).show();
     }
 
